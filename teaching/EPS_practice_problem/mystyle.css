@@ -1,0 +1,33 @@
+body {
+ background-color: #fff5e6;
+ overflow:auto;
+ margin:1cm;
+}
+
+a {
+ color:blue;
+}
+
+h1 {
+ color: #CD5C5C;
+}
+
+h2 {
+ color: #154360;
+}
+
+table,th,td {
+ width:auto;
+ border:1px solid;
+ text-align: center;
+}
+
+math {
+ width:auto;
+}
+
+#solution {
+ background-color: #e6f2ff;
+ border:1px solid;
+ padding:1cm;
+}
