@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Bonds</title>
+  <link rel="stylesheet" href="mystyle.css">
+ </head>
+ <body>
+  <h1 id="top">Bonds</h1>
+   <p><i>Be warned that some numbers will change every time you reload the page. This page uses MathML which may not display properly in some browsers. Try Firefox if math does not render properly in your browser.</i></p>
+  <h2>Learning outcomes</h2>
+  <p>After studying this reading, you should be able to:</p>
+  <ol>
+  <li>Explain and calculate key coupon bond parameters including face value, <a href="#coupon_rate">coupon rate</a> and amount, <a href="#proceeds">proceeds</a> at a premium and discount, <a href="#ytm">YTM</a>, and <a href="#eir">EIR</a></li>
+  <li>Prepare a bond amortization <a href="#schedule">schedule</a> (interest schedule)</li>
+  </ol>
+  
+<h2>Introduction</h2>
+<p>We discuss bonds to introduce the accounting for long-term liabilities. Bonds are a typical example of these.</p>
+<p>A bond is a promissory note issued in the financial markets, and is usually tradable by its holders (the retail lenders) in the markets.</p>
+<p>We will focus on a particular type of bond called a <em>coupon</em> bond.</p>
+<p>A coupon bond promises to pay a lumpsum amount at its maturity date, as well as regular fixed payments called coupons during the bond life.</p>
+
+<h2>Key concepts</h2>
+<h3>Face value</h3>
+The face value of a bond is the lumpsum amount paid at the bond maturity date. We can think of it as similar to returning the amount borrowed via the bond issue, or the principal.
+
+<h3>Coupon</h3>
+The coupon is the fixed regular payment during the bond life (issue date to maturity date). We can think of this as similar to a regular interest payment on the amount borrowed via the bond issue. A common pattern is for the coupon payments to be semi-annual or twice a year.
+
+<h3 id="coupon_rate">Coupon rate</h3>
+<p>The coupon rate is the annual coupon divided by the face value.  Conventionally, the coupon rate is stated as part of the bond description, for example &quot;A company issues a 2 percent bond&quot; means that the bond has a coupon rate of 2 percent.</p>
+
+
+<div class="example">
+<h4>Example</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex1_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The face value is $<span class="ex1_face_value"></span>. How much is each coupon payment?</p>
+<a href="javascript: void(0);" onClick="toggle('ex1_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex1_soln" style="display:none;">
+<p></p>
+<math>
+ <mn class="ex1_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex1_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+ <mo>=</mo>
+ <mn class="ex1_coupon_amt"></mn>
+</math>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h3 id="proceeds">Proceeds</h3>
+<p>The proceeds are the amount collected from the bond markets when the bond is issued, or the amount borrowed. This need not equal the face value (the amount paid back at maturity).</p>
+<p>If the prevailing market interest rates when the bond is issued are <em>more</em> than the bond coupon rate, then the markets will pay less for the bond than the face value. The proceeds in this case will equal the present value of the bond payments discounted at the market interest rate, so that the bond investors will effectively get the market interest rate from their investment. In this case, we say that the bond is issued at a <em>discount</em>.</p>
+
+<div class="example">
+<h4>Example</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex2_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The bond matures on July 1, 2025. The face value is $<span class="ex2_face_value"></span>. The prevailing market interest rate is <span class="ex2_eir"></span> percent pa semi-annually compounded. What are the proceeds?</p>
+<a href="javascript: void(0);" onClick="toggle('ex2_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex2_soln" style="display:none;">
+<p>The coupon amount each period is <span class="ex2_coupon_amt"></span> (
+<math>
+ <mn class="ex2_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex2_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+</math>
+).</p>
+<p>Proceeds =
+<math>
+<mfrac>
+<mn class="ex2_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex2_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>1</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn class="ex2_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex2_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>2</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+ <mn class="ex2_face_value"></mn>
+ <mo>+</mo>
+ <mn class="ex2_coupon_amt"></mn>
+</mrow>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex2_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>3</mn>
+</msup>
+</mfrac>
+<mo>=</mo>
+<mn class="ex2_proceeds"></mn>
+</math>.
+</p>
+<p>In practice, we directly measure the proceeds as the amount we collect from the market (net of bond issue costs), and work out the related market interest rate by solving for the rate that makes the proceeds equal to the present value of the bond cash flows. This requires a financial calculator or a computer program like a spreadsheet (in Excel, you can use the RATE function or the IRR function). </p>
+</div>
+</div>
+
+<p>If the prevailing market interest rates when the bond is issued are <em>less</em> than the bond coupon rate, then the markets will pay more for the bond than the face value. The proceeds in this case will equal the present value of the bond payments discounted at the market interest rate, so that the bond investors will effectively get the market interest rate from their investment. In this case, we say that the bond is issued at a <em>premium</em>.</p>
+
+<div class="example">
+<h4>Example</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex3_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The bond matures on July 1, 2025. The face value is $<span class="ex3_face_value"></span>. The prevailing market interest rate is <span class="ex3_eir"></span> percent pa semi-annually compounded. What are the proceeds?</p>
+<a href="javascript: void(0);" onClick="toggle('ex3_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex3_soln" style="display:none;">
+<p>The coupon amount each period is <span class="ex3_coupon_amt"></span> (
+<math>
+ <mn class="ex3_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex3_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+</math>
+).</p>
+<p>Proceeds =
+<math>
+<mfrac>
+<mn class="ex3_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex3_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>1</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn class="ex3_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex3_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>2</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+ <mn class="ex3_face_value"></mn>
+ <mo>+</mo>
+ <mn class="ex3_coupon_amt"></mn>
+</mrow>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex3_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>3</mn>
+</msup>
+</mfrac>
+<mo>=</mo>
+<mn class="ex3_proceeds"></mn>
+</math>.
+</p>
+<p>In practice, we directly measure the proceeds as the amount we collect from the market (net of bond issue costs), and work out the related market interest rate by solving for the rate that makes the proceeds equal to the present value of the bond cash flows. This requires a financial calculator or a computer program like a spreadsheet (in Excel, you can use the RATE function or the IRR function). </p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h3 id="ytm">Yield to maturity (YTM)</h3>
+
+<p>The yield to maturity (YTM) is the interest rate that a bond buyer gets when they buy the bond at the current market price and hold it to maturity. </p>
+<p>Equivalently, the yield to maturity is the discount rate that makes the present value of the remaining bond cashflows equal to the current market price of the bond.</p>
+
+<div class="example">
+<h4>Example</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex4_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The bond matures on July 1, 2025. The face value is $<span class="ex4_face_value"></span>. The proceeds are $<span class="ex4_proceeds"></span>.</p>
+<p>What is the yield to maturity at the bond issue date? Express this as a semi-annually compounded rate. You can solve for this using a financial calculator or using the RATE or IRR functions in Excel and similar spreadsheet software.</p>
+<a href="javascript: void(0);" onClick="toggle('ex4_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex4_soln" style="display:none;">
+<p>The coupon amount each period is <span class="ex4_coupon_amt"></span> (
+<math>
+ <mn class="ex4_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex4_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+</math>
+).</p>
+<p>To find the yield to maturity (YTM), we solve for X in the following equation:</p>
+<p>
+<math>
+<mn class="ex4_proceeds"></mn>
+<mo>=</mo>
+<mfrac>
+<mn class="ex4_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn>X</mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>1</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn class="ex4_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn>X</mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>2</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+ <mn class="ex4_face_value"></mn>
+ <mo>+</mo>
+ <mn class="ex4_coupon_amt"></mn>
+</mrow>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn>X</mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>3</mn>
+</msup>
+</mfrac>
+</math>.
+</p>
+<p>Solving, we get the YTM to be <span class="ex4_eir"></span> percent pa.</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h3 id="eir">Effective interest rate (EIR)</h3>
+
+<p>The effective interest rate (EIR) is the YTM at the bond issue date based on setting the proceeds net of issue costs equal to the present value of the bond cash flows.</p>
+<p>The effective interest rate is used to compute the bond-related interest expense.</p>
+<p>Though for calculating interest, we use the EIR based on any convenient convention such as semi-annual compounding, when reporting the EIR in the notes, we state it as an annually compounded rate.</p>
+<p>Suppose that we are given a semiannually compounded rate, say <math><msub><mn>r</mn><mn>s</mn></msub></math>; and we want to find the equivalent annually compounded rate, say <math><msub><mn>r</mn><mn>a</mn></msub></math>.</p>
+<p>We set the future value of $1 after 1 year computed using the semiannually compounded rate, equal to the future value of $1 after 1 year computed using the annually compounded rate. In other words, we solve the following equation for  <math><msub><mn>r</mn><mn>a</mn></msub></math>.</p>
+
+<math display="block">
+<msup>
+<mrow>
+<mo>(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<msub>
+ <mn>r</mn>
+ <mn>s</mn>
+</msub>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<mn>1</mn>
+<mo>+</mo>
+<msub>
+ <mn>r</mn>
+ <mn>a</mn>
+</msub>
+<mi>.</mi>
+</math>
+
+<p>We can use a similar approach to find the annually compounded rate given a rate based on any other compounding frequency, say quarterly. We solve for the future value after 1 year, and use that to find the annually compounded rate.</p>
+
+<div class="example">
+<h4>Example</h4>
+<p>A company has a single bond payable with an effective interest rate of <span class="ex5_rs"></span> percent pa semi-annually compounded. What is the effective interest rate that the company reports for this bond in the notes?</p>
+<a href="javascript: void(0);" onClick="toggle('ex5_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex5_soln" style="display:none;">
+<p>Find the equivalent annually compounded rate.</p>
+<math display="block">
+<msup>
+<mrow>
+<mo>(</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<mn class="ex5_rs"></mn>
+<mn>200</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<mn>1</mn>
+<mo>+</mo>
+<msub>
+ <mn>r</mn>
+ <mn>a</mn>
+</msub>
+<mi>.</mi>
+</math>
+<p>Solving, we have the annually compounded rate of <span class="ex5_ra"></span> percent (4 dp).</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="schedule">Interest schedule</h2>
+
+<p>A <em>loan amortization schedule</em> or <em>interest schedule</em> is a useful worksheet in bond accounting. We can refer to it to find the interest expense for each period.</p>
+
+<p>The interest expense for a period is calculated using the EIR, not the coupon rate. Therefore, it need not match the coupon payment for the period.</p>
+
+<p>If the interest expense is <em>less</em> than the coupon payment, then the extra amount of coupon payment is treated as early repayment of the bond obligation (reducing the liability).</p>
+
+<p>If the interest expense is <em>more</em> than the coupon payment, then the extra amount of interest expense is treated as adding on to the bond obligation (increasing the liability).</p>
+
+<p>The following is an example of the format of a loan amortization schedule. (The interest calculation shown is based on a semi-annually compounded EIR).</p>
+
+<table>
+<tr>
+<td>
+Period ending
+</td>
+<td>
+Beg. liability [1]
+</td>
+<td>
+Less: Payment [2]
+</td>
+<td>
+Interest basis [3] (= [1] - [2])
+</td>
+<td>
+Interest expense [4] (= EIR &times; 0.5 &times; [3])
+</td>
+<td>
+End. liability [5] (=[3]+[4])
+</td>
+</tr>
+</table>
+
+<p></p>
+
+<div class="example">
+<h4>Example (bond issued at discount)</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex6_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The bond matures on July 1, 2025. The face value is $<span class="ex6_face_value"></span>. The prevailing market interest rate is <span class="ex6_eir"></span> percent pa semi-annually compounded. Prepare the interest payment schedule in the following format, with half-yearly periods.</p>
+<table>
+<tr>
+<td>
+Period ending
+</td>
+<td>
+Beg. liability [1]
+</td>
+<td>
+Less: Payment [2]
+</td>
+<td>
+Interest basis [3] (= [1] - [2])
+</td>
+<td>
+Interest expense [4] (= EIR &times; 0.5 &times; [3])
+</td>
+<td>
+End. liability [5] (=[3]+[4])
+</td>
+</tr>
+</table>
+<p></p>
+
+<a href="javascript: void(0);" onClick="toggle('ex6_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex6_soln" style="display:none;">
+<p>The coupon amount each period is <span class="ex6_coupon_amt"></span> (
+<math>
+ <mn class="ex6_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex6_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+</math>
+).</p>
+<p>Proceeds =
+<math>
+<mfrac>
+<mn class="ex6_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex6_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>1</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn class="ex6_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex6_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>2</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+ <mn class="ex6_face_value"></mn>
+ <mo>+</mo>
+ <mn class="ex6_coupon_amt"></mn>
+</mrow>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex6_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>3</mn>
+</msup>
+</mfrac>
+<mo>=</mo>
+<mn class="ex6_proceeds"></mn>
+</math>.
+</p>
+<table>
+<tr>
+<td>
+Period ending
+</td>
+<td>
+Beg. liability [1]
+</td>
+<td>
+Less: Payment [2]
+</td>
+<td>
+Interest basis [3] (= [1] - [2])
+</td>
+<td>
+Interest expense [4] (= EIR &times; 0.5 &times; [3])
+</td>
+<td>
+End. liability [5] (=[3]+[4])
+</td>
+</tr>
+
+<!-- Period ending 30/6/2024-->
+
+<tr>
+<td>
+30/6/2024
+</td>
+<td>
+<span class="ex6_1_1"></span>
+</td>
+<td>
+<span class="ex6_1_2"></span>
+</td>
+<td>
+<span class="ex6_1_3"></span>
+</td>
+<td>
+<span class="ex6_1_4"></span>
+</td>
+<td>
+<span class="ex6_1_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 31/12/2024-->
+
+<tr>
+<td>
+31/12/2024
+</td>
+<td>
+<span class="ex6_2_1"></span>
+</td>
+<td>
+<span class="ex6_2_2"></span>
+</td>
+<td>
+<span class="ex6_2_3"></span>
+</td>
+<td>
+<span class="ex6_2_4"></span>
+</td>
+<td>
+<span class="ex6_2_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 30/6/2025-->
+
+<tr>
+<td>
+30/6/2025
+</td>
+<td>
+<span class="ex6_3_1"></span>
+</td>
+<td>
+<span class="ex6_3_2"></span>
+</td>
+<td>
+<span class="ex6_3_3"></span>
+</td>
+<td>
+<span class="ex6_3_4"></span>
+</td>
+<td>
+<span class="ex6_3_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 31/12/2025-->
+
+<tr>
+<td>
+31/12/2025
+</td>
+<td>
+<span class="ex6_4_1"></span>
+</td>
+<td>
+<span class="ex6_4_2"></span>
+</td>
+<td>
+<span class="ex6_4_3"></span>
+</td>
+<td>
+<span class="ex6_4_4"></span>
+</td>
+<td>
+<span class="ex6_4_5"></span>
+</td>
+</tr>
+
+</table>
+
+<p>Notice that the liability keeps increasing each period until it converges to the exact amount of the final repayment (face value + coupon).</p>
+
+</div>
+</div>
+
+<p></p>
+
+<div class="example">
+<h4>Example (bond issued at a premium)</h4>
+<p>On Jan 1, 2024, a company issues a <span class="ex7_coupon_rate"></span> percent coupon bond which pays coupons twice a year during the life, on July 1, and Jan 1 each year (the first payment is on July 1, 2024 and the last payment is at the maturity date, together with the face value. The bond matures on July 1, 2025. The face value is $<span class="ex7_face_value"></span>. The prevailing market interest rate is <span class="ex7_eir"></span> percent pa semi-annually compounded. Prepare the interest payment schedule in the following format, using half-yearly periods.</p>
+<table>
+<tr>
+<td>
+Period ending
+</td>
+<td>
+Beg. liability [1]
+</td>
+<td>
+Less: Payment [2]
+</td>
+<td>
+Interest basis [3] (= [1] - [2])
+</td>
+<td>
+Interest expense [4] (= EIR &times; 0.5 &times; [3])
+</td>
+<td>
+End. liability [5] (=[3]+[4])
+</td>
+</tr>
+</table>
+<p></p>
+
+<a href="javascript: void(0);" onClick="toggle('ex7_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex7_soln" style="display:none;">
+<p>The coupon amount each period is <span class="ex7_coupon_amt"></span> (
+<math>
+ <mn class="ex7_face_value"></mn>
+ <mo>&times;</mo>
+ <mfrac>
+  <mn class="ex7_coupon_rate"></mn>
+  <mn>100</mn>
+ </mfrac>
+ <mo>&times;</mo>
+ <mn>0.5</mn>
+</math>
+).</p>
+<p>Proceeds =
+<math>
+<mfrac>
+<mn class="ex7_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex7_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>1</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn class="ex7_coupon_amt"></mn>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex7_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>2</mn>
+</msup>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mrow>
+ <mn class="ex7_face_value"></mn>
+ <mo>+</mo>
+ <mn class="ex7_coupon_amt"></mn>
+</mrow>
+<msup>
+ <mrow>
+ <mo>(</mo>
+ <mn>1</mn>
+ <mo>+</mo>
+ <mfrac>
+  <mn class="ex7_eir"></mn>
+  <mn>200</mn>
+ </mfrac>
+ <mo>)</mo>
+ </mrow>
+ <mn>3</mn>
+</msup>
+</mfrac>
+<mo>=</mo>
+<mn class="ex7_proceeds"></mn>
+</math>.
+</p>
+<table>
+<tr>
+<td>
+Period ending
+</td>
+<td>
+Beg. liability [1]
+</td>
+<td>
+Less: Payment [2]
+</td>
+<td>
+Interest basis [3] (= [1] - [2])
+</td>
+<td>
+Interest expense [4] (= EIR &times; 0.5 &times; [3])
+</td>
+<td>
+End. liability [5] (=[3]+[4])
+</td>
+</tr>
+
+<!-- Period ending 30/6/2024-->
+
+<tr>
+<td>
+30/6/2024
+</td>
+<td>
+<span class="ex7_1_1"></span>
+</td>
+<td>
+<span class="ex7_1_2"></span>
+</td>
+<td>
+<span class="ex7_1_3"></span>
+</td>
+<td>
+<span class="ex7_1_4"></span>
+</td>
+<td>
+<span class="ex7_1_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 31/12/2024-->
+
+<tr>
+<td>
+31/12/2024
+</td>
+<td>
+<span class="ex7_2_1"></span>
+</td>
+<td>
+<span class="ex7_2_2"></span>
+</td>
+<td>
+<span class="ex7_2_3"></span>
+</td>
+<td>
+<span class="ex7_2_4"></span>
+</td>
+<td>
+<span class="ex7_2_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 30/6/2025-->
+
+<tr>
+<td>
+30/6/2025
+</td>
+<td>
+<span class="ex7_3_1"></span>
+</td>
+<td>
+<span class="ex7_3_2"></span>
+</td>
+<td>
+<span class="ex7_3_3"></span>
+</td>
+<td>
+<span class="ex7_3_4"></span>
+</td>
+<td>
+<span class="ex7_3_5"></span>
+</td>
+</tr>
+
+<!-- Period ending 31/12/2025-->
+
+<tr>
+<td>
+31/12/2025
+</td>
+<td>
+<span class="ex7_4_1"></span>
+</td>
+<td>
+<span class="ex7_4_2"></span>
+</td>
+<td>
+<span class="ex7_4_3"></span>
+</td>
+<td>
+<span class="ex7_4_4"></span>
+</td>
+<td>
+<span class="ex7_4_5"></span>
+</td>
+</tr>
+
+</table>
+
+<p>Notice that the liability keeps decreasing each period until it converges to the exact amount of the final repayment (face value + coupon).</p>
+
+</div>
+</div>
+
+
+<p>In the examples, above, we treat the accrued interest each period as part of the bond liability. It is also fine to record it as a separate interest payable.</p>
+
+<p><a href="#top">back to top</a></p>
+
+  <script src="bond_reading.js"></script>
+
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+
+ </body>
+</html>
