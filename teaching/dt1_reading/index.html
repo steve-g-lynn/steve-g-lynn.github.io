@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Deferred tax 1</title>
+  <link rel="stylesheet" href="mystyle.css">
+ </head>
+ <body>
+  <h1 id="top">Deferred tax 1</h1>
+   <p><i>Be warned that some numbers will change every time you reload the page. This page uses MathML which may not display properly in some browsers. Try Firefox if math does not render properly in your browser.</i></p>
+  <p>This reading is based on the prescriptive guidance in Singapore FRS(I) 1-12 <em>Income taxes</em></p>  
+  <h2>Learning outcomes</h2>
+  <p>After studying this reading, you should be able to:</p>
+  <ol>
+  <li>Explain how accountants calculate deferred income tax expense to adjust for differences between financial reporting profits and the tax calculation of profits.</li>
+  <li>Explain and give examples of <a href="#perm_temp">temporary and permanent</a> book-tax differences</li>
+  <li>Explain the calculation of deferred tax liabilities or assets arising from a capital <a href="#asset_example">asset</a>, or a <a href="#liab_example">provision</a> (liability).</li>
+  <li>Explain the accounting for tax loss <a href="#carryforward">carryforwards</a>, and tax loss <a href="#carryback">carrybacks.</a></li>
+  <li>Prepare a <a href="#current_tax_worksheet">current tax worksheet</a></li>
+  </ol>
+  
+<h2>Disclaimer</h2>
+
+<p>In this topic, we study how to do the financial reporting for a reporting entity&#39;s income tax obligations. We do not learn the tax rules here, that is left to other courses. Our examples and exercises refer to some assumed tax rules that serve to illustrate the particular accounting issue at hand. These given rules do not necessarily reflect the actual tax rules.</p>
+
+<h2 id="intro">Introductory Example</h2>
+
+<div class="example">
+<p><span class="coname"></span> has the following income statement and tax computation for the year ended 31/12/2024.</p>
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>I/S</td>
+<td>Tax</td>
+</tr>
+<tr>
+<td class="l">Sales revenue</td>
+<td><span class="sales"></span></td>
+<td><span class="sales"></span></td>
+</tr>
+<tr>
+<td class="l">Dividend income</td>
+<td><span class="div_inc"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">Amortization expense</td>
+<td><span class="ip_amort"></span></td>
+<td><span class="ip_allow"></span></td>
+</tr>
+<tr>
+<td class="l">Political contribution expense</td>
+<td><span class="politics"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">Provision expense</td>
+<td><span class="prov_exp"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">PBT / Taxable profits</td>
+<td><span class="pbt"></span></td>
+<td><span class="pbt_tax"></span></td>
+</tr>
+<tr>
+<td class="l">Income tax @ <span class="taxrate"></span>% </td>
+<td></td>
+<td><span class="currtax"></span></td>
+</tr>
+</table>
+
+<p>Dividend income is tax exempt and is not included in the tax computation.</p>
+<p>Political contribution expense cannot be deducted for tax purposes.</p>
+<p>Amortization expense for financial reporting purposes is based on an IP asset (intangible) purchased at a cost of $<span class="ip_cost"></span> at the beginning of 2024, with a useful life (in financial reporting) of <span class="ip_life_acc"></span> years. For tax purposes, the cost amount can be claimed as deductions via equal annual allowances for <span class="ip_life_tax"></span> years.</p>
+<p><span class="coname"></span> has a legal obligation to perform environmental cleanup services at 31/12/2026. The company has set up a provision for this obligation. The provision expense recorded in the income statement arises from creating this provision at 31/12/2024. For tax purposes, the environmental cleanup costs can only be claimed as a deduction when they are actually paid at 31/12/2026.</p>
+<p>The income tax rate is <span class="taxrate"> </span> percent. Based on this, the actual tax payable during the year is computed as:
+<math display="inline">
+<mn class="pbt_tax"></mn>
+<mo>&times;</mo>
+<mn class="taxrate"></mn>
+<mo>%</mo>
+<mo>=</mo>
+<mn class="currtax"></mn>
+</math>.
+</p>
+
+</div>
+
+<p>We refer to the actual tax payable during the year, computed using the tax rules, as the current portion of income tax expense, or just <em>current tax</em> expense.</p>
+
+<p>If we used this number as our income tax expense for the year (in financial reporting), it would lead to a misleading computation of the <em>effective tax rate</em> (ETR). The effective tax rate is computed as income tax expense divided by PBT (financial reporting PBT).</p>
+
+<div class='example'>
+<p>Compute the ETR in the above example assuming that the current tax is used as the measure of income tax expense.</p>
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('etr_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="etr_soln" style="display:none;">
+<p></p>
+ETR (wrong):
+<math>
+<mfrac>
+<mn class="currtax"></mn>
+<mn class="pbt"></mn>
+</mfrac>
+<mo>=</mo>
+<mn class="etr"></mn>
+</math>.
+</div>
+</div>
+
+<p>This ETR calculation is misleading because the tax calculation is based on different accounting from the profits calculation.</p>
+<p>To correct for this, we compute an additional income tax expense that reflects an adjustment for the differences between financial reporting (book) profits and the tax calculation of profits. We refer to this additional adjustment as <em>deferred tax</em> expense.</p>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="perm_temp">Permanent and temporary differences</h2>
+
+<p>In calculating deferred tax, we distinguish between permanent and temporary book-tax differences. In calculating deferred tax, we only consider temporary differences.</p>
+
+<p>Temporary differences between book and tax accounts are differences that arise from balance-sheet items where over the life of the item, the accumulated differences over the years will be zero. That is the current difference will be matched by an opposite difference some time in the future, or will reverse in the future.</p>
+
+<div class='example'>
+<p>Can you identify any temporary differences in the introductory example?</p>
+<a href="javascript: void(0);" onClick="toggle('temp_diff')">
+Click here to toggle viewing the solution.
+</a>
+<div id="temp_diff" style="display:none;">
+<p>One temporary difference is the difference between book amortization and tax allowances on the IP asset. Over the life of the IP asset, the cumulative book amortization must equal the cumulative tax allowances so that the lower-than-tax book amortization in the current year must be offset by a higher-than-tax amortization in future (in Year 6 of the IP asset life, when the tax allowance is 0).</p>
+<p>Another temporary difference arises from the environmental provision. The provision expense anticipates a future claim (in 2026) that will lead to a tax deduction. Thus, we expect that the current higher book expense will be offset by a matching higher tax deduction in 2026.</p>
+</div>
+</div>
+
+<p>Permanent differences between book and tax accounts are differences that do not mechanically reverse over time. We treat these as true economic differences rather than arising purely from different accounting; and we make no attempt to adjust for them using deferred tax.</p>
+
+
+<div class='example'>
+<p>Can you identify any permanent differences in the introductory example?</p>
+<a href="javascript: void(0);" onClick="toggle('perm_diff')">
+Click here to toggle viewing the solution.
+</a>
+<div id="perm_diff" style="display:none;">
+<p>One permanent difference is the difference arising from dividend income which is part of (book) PBT but not part of (tax) taxable profit. This is a true tax-free income that will not be offset in future by higher taxes.</p>
+<p>Another permanent difference arises from the political contribution expense, which reduces (book) PBT, but does not reduce taxable profit. This is a true extra tax burden, which will not be offset in future by any tax relief.</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2>The Liability approach</h2>
+
+<p>In computing temporary book-tax differences, rather than comparing income statement items, we compare financial-reporting balance-sheet items with their counterparts on a hypothetical balance sheet prepared using tax rules rather than financial reporting rules. The <em>tax basis</em> of a balance-sheet item is its value on this tax-based balance sheet.</p>
+
+<p>This general approach to accounting for deferred tax is called the <em>asset-liability approach</em> or for short the <em>liability approach</em>.</p>
+
+<h3>Calculation for an asset (CA &gt; TB)</h3>
+
+<p>If an asset has a higher (book) carrying amount (<em>CA</em> say) than its tax basis (<em>TB</em> say), then the difference (which will reverse over time) corresponds to future higher tax obligations. We recognize this as a liability called <em>deferred tax liability</em> (DTL). The differences are called <em>taxable temporary differences</em> (TTD).
+We compute the DTL by multiplying the TTD by the best estimate of the future income tax rate (<em>taxrate</em>).
+</p>
+
+<math display="block">
+<mi>TTD</mi>
+<mo>=</mo>
+<mi>CA</mi>
+<mo>-</mo>
+<mi>TB</mi>
+<mo>.</mo>
+</math>
+
+<math display="block">
+<mi>DTL</mi>
+<mo>=</mo>
+<mi>TTD</mi>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>CA</mi>
+<mo>-</mo>
+<mi>TB</mi>
+<mo>)</mo>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>.</mo>
+</math>
+
+<p>The logic can be explained as follows: for an asset, its carrying amount on the books represents a stored value--an estimate of the future benefits that the asset will produce. When these future benefits occur, they will lead to future taxable income, say &quot;future taxable amounts&quot; (FTA). But this taxable income will be offset by any related deductions, such as the remaining allowances in the case of the IP asset in our example (which equal the TB in the IP asset case), say &quot; future deductible amounts&quot; (FDA). The net amount of future taxable amount (FTA minus FDA) is the TTD, which matches CA minus TB for our IP asset example (also more generally, we will discuss that in another lesson).</p>
+
+<h3>Calculation for an asset (CA &lt; TB)</h3>
+
+<p>If an asset has a lower (book) carrying amount (<em>CA</em> say) than its tax basis (<em>TB</em> say), then the difference corresponds to future tax savings (or realizes tax payments anticipated earlier). We recognize this as an asset called <em>deferred tax asset</em> (DTA) (or a reduction in a DTL). The differences are called <em>deductible temporary differences</em> (DTD).
+We compute the DTA by multiplying the DTD by the best estimate of the future income tax rate (<em>taxrate</em>).
+</p>
+
+<math display="block">
+<mi>DTD</mi>
+<mo>=</mo>
+<mi>TB</mi>
+<mo>-</mo>
+<mi>CA</mi>
+<mo>.</mo>
+</math>
+
+<math display="block">
+<mi>DTA</mi>
+<mo>=</mo>
+<mi>DTD</mi>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>TB</mi>
+<mo>-</mo>
+<mi>CA</mi>
+<mo>)</mo>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>.</mo>
+</math>
+
+<p>The logic can be explained as follows: for an asset, its carrying amount on the books represents a stored value--an estimate of the future benefits that the asset will produce. When these future benefits occur, they will lead to future taxable income, say &quot;future taxable amounts&quot; (FTA). But this taxable income will be offset by any related deductions, such as the remaining allowances in the case of the IP asset in our example (which equal the TB in the IP asset case), say &quot; future deductible amounts&quot; (FDA). If the future deductions are higher than the future taxable amount, then we expect tax savings. The net amount of future deductions (FDA minus FTA, equal to CA minus TB) is the basis for the future tax savings that we record via a deferred tax asset.</p>
+
+<h3>Calculation for a liability (CA &gt; TB)</h3>
+
+<p>If a liability has a higher (book) carrying amount (<em>CA</em> say) than its tax basis (<em>TB</em> say), then the difference (which will reverse over time) corresponds to future higher tax deductions, or future tax savings. We recognize this as an asset called <em>deferred tax asset</em> (DTA). The differences are called <em>deductible temporary differences</em> (DTD).
+We compute the DTA by multiplying the DTD by the best estimate of the future income tax rate (<em>taxrate</em>).
+</p>
+
+<math display="block">
+<mi>DTD</mi>
+<mo>=</mo>
+<mi>CA</mi>
+<mo>-</mo>
+<mi>TB</mi>
+<mo>.</mo>
+</math>
+
+<math display="block">
+<mi>DTA</mi>
+<mo>=</mo>
+<mi>DTD</mi>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>CA</mi>
+<mo>-</mo>
+<mi>TB</mi>
+<mo>)</mo>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>.</mo>
+</math>
+
+<h3>Calculation for a liability (CA &lt; TB)</h3>
+
+<p>If a liability has a lower (book) carrying amount (<em>CA</em> say) than its tax basis (<em>TB</em> say), then the difference corresponds to future higher tax obligations (or a realization of tax savings anticipated earlier). We recognize this as a liability called <em>deferred tax liability</em> (DTL) (or a reduction in a DTA). The differences are called <em>taxable temporary differences</em> (TTD).
+We compute the DTL by multiplying the TTD by the best estimate of the future income tax rate (<em>taxrate</em>).
+</p>
+
+<math display="block">
+<mi>TTD</mi>
+<mo>=</mo>
+<mi>TB</mi>
+<mo>-</mo>
+<mi>CA</mi>
+<mo>.</mo>
+</math>
+
+<math display="block">
+<mi>DTL</mi>
+<mo>=</mo>
+<mi>TTD</mi>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>TB</mi>
+<mo>-</mo>
+<mi>CA</mi>
+<mo>)</mo>
+<mo>&times;</mo>
+<mi>taxrate</mi>
+<mo>.</mo>
+</math>
+
+<p>Deferred tax liabilities and deferred tax assets are always noncurrent (in IFRS).</p>
+<p>In computing deferred tax liabilities and deferred tax assets, we never apply discounting, that is, we do not calculate a present value.</p>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="asset_example">Asset example (IP asset)</h2>
+
+<div class='example'>
+<p>Consider the IP asset from our <a href="#intro">introductory example</a>. Recall that the IP asset (intangible) was purchased at a cost of $<span class="ip_cost"></span> at the beginning of 2024, with a useful life (in financial reporting) of <span class="ip_life_acc"></span> years. For tax purposes, the cost amount can be claimed as deductions via equal annual allowances for <span class="ip_life_tax"></span> years. The tax rate is <span class="taxrate"></span>%.</p>
+
+<p>Compute the DTL and DTA each year (year-end) using the following template:</p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+<td>2026</td>
+<td>2027</td>
+<td>2028</td>
+<td>2029</td>
+</tr>
+<tr>
+<td class="l">CA</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">TB</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">TTD</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">DTD</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">DTL</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">DTA</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">Deferred tax expense (income)</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+
+<p>The tax basis (TB) is the tax written-down value (cost less allowances taken to date).</p>
+<p>The deferred tax expense (income) is the increase in the deferred tax liability (asset).</p>
+
+<a href="javascript: void(0);" onClick="toggle('ip_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ip_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+<td>2026</td>
+<td>2027</td>
+<td>2028</td>
+<td>2029</td>
+</tr>
+<tr>
+<td class="l">CA</td>
+<td><span class="ip_ca_1"></span></td>
+<td><span class="ip_ca_2"></span></td>
+<td><span class="ip_ca_3"></span></td>
+<td><span class="ip_ca_4"></span></td>
+<td><span class="ip_ca_5"></span></td>
+<td><span class="ip_ca_6"></span></td>
+</tr>
+<tr>
+<td class="l">TB</td>
+<td><span class="ip_tb_1"></span></td>
+<td><span class="ip_tb_2"></span></td>
+<td><span class="ip_tb_3"></span></td>
+<td><span class="ip_tb_4"></span></td>
+<td><span class="ip_tb_5"></span></td>
+<td><span class="ip_tb_6"></span></td>
+</tr>
+<tr>
+<td class="l">TTD [CA - TB]</td>
+<td><span class="ip_ttd_1"></span></td>
+<td><span class="ip_ttd_2"></span></td>
+<td><span class="ip_ttd_3"></span></td>
+<td><span class="ip_ttd_4"></span></td>
+<td><span class="ip_ttd_5"></span></td>
+<td><span class="ip_ttd_6"></span></td>
+</tr>
+<tr>
+<td class="l">DTD [TB - CA]</td>
+<td><span class="ip_dtd_1"></span></td>
+<td><span class="ip_dtd_2"></span></td>
+<td><span class="ip_dtd_3"></span></td>
+<td><span class="ip_dtd_4"></span></td>
+<td><span class="ip_dtd_5"></span></td>
+<td><span class="ip_dtd_6"></span></td>
+</tr>
+<tr>
+<td class="l">DTL [TTD &times; <span class="taxrate"></span>%]</td>
+<td><span class="ip_dtl_1"></span></td>
+<td><span class="ip_dtl_2"></span></td>
+<td><span class="ip_dtl_3"></span></td>
+<td><span class="ip_dtl_4"></span></td>
+<td><span class="ip_dtl_5"></span></td>
+<td><span class="ip_dtl_6"></span></td>
+</tr>
+<tr>
+<td class="l">DTA [DTD &times; <span class="taxrate"></span>%]</td>
+<td><span class="ip_dta_1"></span></td>
+<td><span class="ip_dta_2"></span></td>
+<td><span class="ip_dta_3"></span></td>
+<td><span class="ip_dta_4"></span></td>
+<td><span class="ip_dta_5"></span></td>
+<td><span class="ip_dta_6"></span></td>
+</tr>
+<tr>
+<td class="l">Deferred tax expense (income) [&#916; DTL / (&#916; DTA)]</td>
+<td><span class="ip_dte_1"></span></td>
+<td><span class="ip_dte_2"></span></td>
+<td><span class="ip_dte_3"></span></td>
+<td><span class="ip_dte_4"></span></td>
+<td><span class="ip_dte_5"></span></td>
+<td><span class="ip_dte_6"></span></td>
+</tr>
+</table>
+<p>Notice that the temporary differences and the resulting deferred tax liability or asset go to zero at the end of the asset financial-reporting life. </p>
+<p>The accumulated deferred tax income or expense is zero over the life of the asset (up to rounding).</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="liab_example">Liability example (provision)</h2>
+
+<div class='example'>
+<p>Consider the provision from our <a href="#intro">introductory example</a>. Here are the related case facts again.</p>
+<p><span class="coname"></span> has a legal obligation to perform environmental cleanup services at 31/12/2026. The company has set up a provision for this obligation. The provision expense recorded in the income statement arises from creating this provision at 31/12/2024. For tax purposes, the environmental cleanup costs can only be claimed as a deduction when they are actually paid at 31/12/2026.</p>
+<p>Compute the DTL and DTA each year (year-end) using the following template:</p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+<td>2026</td>
+</tr>
+<tr>
+<td class="l">CA</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">TB</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">DTD</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">DTA</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="l">Deferred tax income (&#916; DTA)</td>
+<td></td><td></td><td></td>
+</tr>
+</table>
+<p>For the carrying amount (CA), assume that the liability needs no updating in 2025, and exactly covers the related loss in 2026. Also there is no discounting.</p>
+<p>The tax basis (TB) is always 0 (if we were following tax rules to construct the balance sheet, we would only record the related cost when the cleanup is actually undertaken with an actual outlay, when it would be immediately an expense. We would never anticipate it as a future loss via a liability.)</p>
+<p>The deferred tax income [negative or reversed expense] is the increase in the net deferred tax asset.</p>
+
+<a href="javascript: void(0);" onClick="toggle('prov_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="prov_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+<td>2026</td>
+</tr>
+<tr>
+<td class="l">CA</td>
+<td><span class="prov_ca_1"></span></td>
+<td><span class="prov_ca_2"></span></td>
+<td><span class="prov_ca_3"></span></td>
+</tr>
+<tr>
+<td class="l">TB</td>
+<td><span class="prov_tb_1"></span></td>
+<td><span class="prov_tb_2"></span></td>
+<td><span class="prov_tb_3"></span></td>
+</tr>
+<tr>
+<td class="l">DTD [CA - TB]</td>
+<td><span class="prov_dtd_1"></span></td>
+<td><span class="prov_dtd_2"></span></td>
+<td><span class="prov_dtd_3"></span></td>
+</tr>
+<tr>
+<td class="l">DTA [DTD &times; <span class="taxrate"></span>%]</td>
+<td><span class="prov_dta_1"></span></td>
+<td><span class="prov_dta_2"></span></td>
+<td><span class="prov_dta_3"></span></td>
+</tr>
+<tr>
+<td class="l">Deferred tax income</td>
+<td><span class="prov_dti_1"></span></td>
+<td><span class="prov_dti_2"></span></td>
+<td><span class="prov_dti_3"></span></td>
+</tr>
+</table>
+<p>Notice that the temporary differences and the resulting deferred tax liability or asset go to zero by the settlement date of the provision.</p>
+<p>The accumulated deferred tax income is zero over the life of the asset (up to rounding).</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="carryforward">Tax loss carryforwards</h2>
+
+<p>If a company has a loss in its tax computation, the tax rules may permit carrying the loss forward to offset against taxable profits in a future year. </p>
+<p>In such a situation, the company computes a deferred tax asset as:</p>
+<math display="block">
+<mi>Tax&nbsp;Loss</mi>
+<mo>&times;</mo>
+<mi>Tax&nbsp;Rate</mi>
+</math>
+<p>This deferred tax asset should only be recognized if the company can reasonably expect to realize the related tax savings in future. This means that the DTA should only be recognized to the extent that the company expects to earn sufficient future profits to cover the current tax loss. If a potential deferred tax asset cannot be recognized, the related amounts must still be disclosed in the notes.</p>
+
+<div class='example'>
+<h4>Example</h4>
+<p>Luk Co has a tax loss of $<span class="olc_loss24"></span> in 2024. In 2025, Luk Co has a profit (tax calculation) of $<span class="olc_profit25"></span>. The income tax rate is <span class="taxrate"></span> percent. Fill up the following table</p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+</tr>
+<tr>
+<td class="l">Tax profit (loss)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">DTA at year-end</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Current tax expense [C]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Deferred tax expense [D]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Income tax expense [C+D]</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex_olc')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex_olc" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>2024</td>
+<td>2025</td>
+</tr>
+<tr>
+<td class="l">Tax profit (loss)</td>
+<td>(<span class="olc_loss24"></span>)</td>
+<td><span class="olc_profit25"></span></td>
+</tr>
+<tr>
+<td class="l">DTA at year-end</td>
+<td><span class="olc_dta_1"></span></td>
+<td><span class="olc_dta_2"></span></td>
+</tr>
+<tr>
+<td class="l">Current tax expense [C]</td>
+<td><span class="olc_cte_1"></span></td>
+<td><span class="olc_cte_2"></span></td>
+</tr>
+<tr>
+<td class="l">Deferred tax expense [D]</td>
+<td>(<span class="olc_dte_1"></span>)</td>
+<td><span class="olc_dte_2"></span></td>
+</tr>
+<tr>
+<td class="l">Income tax expense [C+D]</td>
+<td>(<span class="olc_ite_1"></span>)</td>
+<td><span class="olc_ite_2"></span></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="carryback">Operating loss carryback</h2>
+
+<p>The tax rules may also permit carrying a tax loss back to offset taxable profits in the previous year and thereby to reduce the income tax burden from the previous year.</p>
+
+<p>If a company elects to carry back its tax loss, it will receive a refund from the previous year&#39;s tax burden. It can record this as a receivable.</p>
+
+<div class='example'>
+<h4>Example</h4>
+<p>Poh Co has a tax loss of $<span class="cb_loss24"></span> in tax year-of-assessment (YA) 2024. In the previous YA 2023, they had a taxable profit of $<span class="cb_profit23"></span>. They elect to carry back the tax loss. Show the journal entry to record this. The income tax rate is <span class="taxrate"></span> percent.</p>
+<a href="javascript: void(0);" onClick="toggle('cb_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="cb_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>
+</td>
+<td class="je_amt">
+Dr
+</td>
+<td class="je_amt">
+Cr
+</td>
+</tr>
+<tr>
+<td class="je_item">
+Dr Current income tax receivable
+</td>
+<td class="je_amt">
+<span class="cb_refund">100</span>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="je_item">
+&nbsp;&nbsp;Cr Current income tax expense 
+</td>
+<td>
+</td>
+<td class="je_amt">
+<span class="cb_refund">100</span>
+</td>
+</tr>
+</table>
+<p>[
+<math display="inline">
+<mn class="cb_loss24"></mn>
+<mo>&times;</mo>
+<mn class="taxrate"></mn>
+<mo>%</mo>
+</math>
+]</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="current_tax_worksheet">Current tax worksheet</h2>
+
+<p>We can use a worksheet to calculate the current tax liability for the financial year. The format is as follows:</p>
+
+<table>
+<tr>
+<td class="l">PROFIT BEFORE TAX (BOOK)</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">ADD:</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">Book expenses that differ from the corresponding tax deductions</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">Tax income items that differ from the corresponding book income items</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l"></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">LESS:</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">Book income items that differ from the corresponding tax income</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">Tax deductions that differ from the corresponding book expense</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">TAXABLE PROFIT (TAX)</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td class="l">CURRENT TAX LIABILITY</td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<p></p>
+
+<div class='example'>
+<h4>Example</h4>
+<p>Prepare the current tax worksheet based on the <a href="#intro">introductory example</a>.</p>
+<a href="javascript:void(0);" onClick="toggle('intro_repeat')">
+Click here to toggle a review of the introductory example.
+</a>
+<div id="intro_repeat" style = "display:none">
+<p><span class="coname"></span> has the following income statement and tax computation for the year ended 31/12/2024.</p>
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>I/S</td>
+<td>Tax</td>
+</tr>
+<tr>
+<td class="l">Sales revenue</td>
+<td><span class="sales"></span></td>
+<td><span class="sales"></span></td>
+</tr>
+<tr>
+<td class="l">Dividend income</td>
+<td><span class="div_inc"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">Amortization expense</td>
+<td><span class="ip_amort"></span></td>
+<td><span class="ip_allow"></span></td>
+</tr>
+<tr>
+<td class="l">Political contribution expense</td>
+<td><span class="politics"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">Provision expense</td>
+<td><span class="prov_exp"></span></td>
+<td>0</td>
+</tr>
+<tr>
+<td class="l">PBT / Taxable profits</td>
+<td><span class="pbt"></span></td>
+<td><span class="pbt_tax"></span></td>
+</tr>
+<tr>
+<td class="l">Income tax @ <span class="taxrate"></span>% </td>
+<td></td>
+<td><span class="currtax"></span></td>
+</tr>
+</table>
+
+<p>Dividend income is tax exempt and is not included in the tax computation.</p>
+<p>Political contribution expense cannot be deducted for tax purposes.</p>
+<p>Amortization expense for financial reporting purposes is based on an IP asset (intangible) purchased at a cost of $<span class="ip_cost"></span> at the beginning of 2024, with a useful life (in financial reporting) of <span class="ip_life_acc"></span> years. For tax purposes, the cost amount can be claimed as deductions via equal annual allowances for <span class="ip_life_tax"></span> years.</p>
+<p><span class="coname"></span> has a legal obligation to perform environmental cleanup services at 31/12/2026. The company has set up a provision for this obligation. The provision expense recorded in the income statement arises from creating this provision at 31/12/2024. For tax purposes, the environmental cleanup costs can only be claimed as a deduction when they are actually paid at 31/12/2026.</p>
+<p>The income tax rate is <span class="taxrate"> </span> percent. Based on this, the actual tax payable during the year is computed as:
+<math display="inline">
+<mn class="pbt_tax"></mn>
+<mo>&times;</mo>
+<mn class="taxrate"></mn>
+<mo>%</mo>
+<mo>=</mo>
+<mn class="currtax"></mn>
+</math>.
+</p>
+</div>
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ctw_soln')">
+Click here to toggle viewing the current tax worksheet.
+</a>
+<div id="ctw_soln" style="display:none;">
+<p><span class="coname"></span><br/>
+Current tax worksheet<br/>
+Year ended 31/12/2024<br/>
+(Amunts in $)</p>
+<table>
+<tr>
+<td class="l">PROFIT BEFORE TAX (BOOK)</td>
+<td class="r"><strong><span class="pbt"></span></strong></td>
+</tr>
+<tr>
+<td class="l">ADD:</td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Amortization expense</td>
+<td class="r"><span class="ip_amort"></span></td>
+</tr>
+<tr>
+<td class="l">Provision expense</td>
+<td class="r"><span class="prov_exp"></span></td>
+</tr>
+<tr>
+<td class="l">Political contribution expense</td>
+<td class="r"><span class="politics"></span></td>
+</tr>
+<tr>
+<td class="l"></td>
+<td><strong><span class="ctw_subtotal1"></span></strong></td>
+</tr>
+<tr>
+<td class="l">LESS:</td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Dividend income</td>
+<td class="r"><span class="div_inc"></span></td>
+</tr>
+<tr>
+<td class="l">Allowance on IP asset</td>
+<td class="r"><span class="ip_allow"></span></td>
+</tr>
+<tr>
+<td class="l">TAXABLE PROFITS</td>
+<td><strong><span class="pbt_tax"></span></strong></td>
+</tr>
+<tr>
+<td class="l">CURRENT TAX PAYABLE @ <span class="taxrate"></span>%</td>
+<td class="r"><strong><span class="currtax"></span></strong></td>
+</tr>
+</table>
+<p>The journal entry to record the current tax payable for the year:</p>
+<table>
+<tr>
+<td>
+</td>
+<td class="je_amt">
+Dr
+</td>
+<td class="je_amt">
+Cr
+</td>
+</tr>
+<tr>
+<td class="je_item">
+Dr Income tax expense--current
+</td>
+<td class="je_amt">
+<span class="currtax">100</span>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="je_item">
+&nbsp;&nbsp;Cr Income tax payable
+</td>
+<td>
+</td>
+<td class="je_amt">
+<span class="currtax">100</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+  <script src="dt1_reading.js"></script>
+
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+
+ </body>
+</html>
