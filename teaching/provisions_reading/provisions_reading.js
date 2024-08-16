@@ -168,7 +168,7 @@ sl_update("ex14_curr_eb_cpu",ex14_curr_eb_cpu.toLocaleString());
 let ex14_curr_eb = ex14_curr_eb_cpu * ex14_curr_eb_units;
 sl_update("ex14_curr_eb",ex14_curr_eb.toLocaleString());
 
-let ex14_noncurr_bb_up = ex14_noncurr_bb / ex14_noncurr_bb_cpu * ex14_curr_eb_cpu;
+let ex14_noncurr_bb_up = (ex14_noncurr_bb / ex14_noncurr_bb_cpu * ex14_curr_eb_cpu) - ex14_noncurr_bb;
 sl_update( "ex14_noncurr_bb_up",ex14_noncurr_bb_up.toLocaleString());
 
 let ex14_curr_bb_exp = ex14_curr_bb - ex14_claims;
