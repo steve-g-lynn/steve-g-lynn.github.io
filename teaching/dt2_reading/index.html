@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Deferred tax 1</title>
+  <link rel="stylesheet" href="mystyle.css">
+ </head>
+ <body>
+  <h1 id="top">Deferred tax 2</h1>
+   <p><i>Be warned that some numbers will change every time you reload the page. This page uses MathML which may not display properly in some browsers. Try Firefox if math does not render properly in your browser.</i></p>
+  <p>This reading is based on the prescriptive guidance in Singapore FRS(I) 1-12 <em>Income taxes</em></p>  
+  <h2>Learning outcomes</h2>
+  <p>After studying this reading, you should be able to:</p>
+  <ol>
+  <li>
+  Compute the <a href="#p7">tax basis for an asset</a> using paragraph 7 of SFRS(I):1-12.
+  </li>
+  <li>
+  Compute the <a href="#p8">tax basis for a liability</a> using paragraph 8 of SFRS(I) 1-12.
+  </li>
+  <li>
+  Identify and correctly treat some types of <a href="#excl">excluded differences</a>---differences that the standard requires us to exclude in computing deferred tax.
+  </li>
+  <li>
+  Prepare a <a href="#dtw">deferred tax worksheet</a> to find the deferred tax liability and asset balances at balance-sheet date.
+  </li>
+  <li>
+  Briefly explain some <a href="#pres">presentation issues</a>---deferred tax items are noncurrent, and netting.
+  </li>
+  </ol>
+  
+<h2>Disclaimer</h2>
+
+<p>In this topic, we study how to do the financial reporting for a reporting entity&#39;s income tax obligations. We do not learn the tax rules here, that is left to other courses. Our examples and exercises refer to some assumed tax rules that serve to illustrate the particular accounting issue at hand. These given rules do not necessarily reflect the actual tax rules.</p>
+
+<h2 id="p7">Asset Tax Basis: constructive calculation</h2>
+
+<p>Paragraph 7 of SFRS(I) 1-12 provide a definition of the tax basis of an asset that we can use to  establish a formula to calculate the tax basis.
+</p>
+
+<p>Let us define the terms that we will use to build the formula.</p>
+
+<h3>Carrying amount (CA)</h3>
+
+<p>The carrying amount of the asset is the amount at which it is carried on the balance sheet, i.e., its net book value for financial reporting purposes.</p>
+
+<h3>Future taxable amount (FTA)</h3>
+
+<p>An asset by definition is held to generate future economic benefits. When the asset carrying amount is recovered via future economic benefits, how much of this recovery will be subject to tax? This is the future taxable amount (FTA). Recovery is via the usual business purpose for that asset (e.g., by using the asset for PPE, or selling it for an asset held for sale).</p>
+
+<p>The FTA measures how much future taxable income is stored in the accounting carrying amount of the asset (which will lead to future taxes unless offset by future deductions).</p>
+
+<h3>Future deductible amount (FDA)</h3>
+
+<p>The company may be eligible to claim future deductions to offset against the future taxable income represented by the FTA. The amount of such future deductions is the future deductible amounts (FDA).</p>
+
+<h3>Deriving the TB formula</h3>
+
+<p>The taxable temporary differences (TTD) or deductible temporary differences (DTD) can directly be defined in terms of the FTA and FDA. </p>
+
+<h4>FTA &gt; FDA</h4>
+
+<p>If FTA &gt; FDA, then we have taxable temporary differences given by: [Equation (1)]</p>
+
+<math display ='block'>
+<mn>TTD</mn>
+<mo>=</mo>
+<mn>FTA</mn>
+<mo>-</mo>
+<mn>FDA</mn>
+<mo>.</mo>
+</math>
+
+<p>This follows directly from the meaning of taxable temporary differences: the future amounts that will be subject to tax net of related tax deductions.</p>
+
+<p>Recall that we earlier (Deferred Tax reading 1) defined TTD as follows: [Equation(2)]</p>
+
+<math display ='block'>
+<mn>TTD</mn>
+<mo>=</mo>
+<mn>CA</mn>
+<mo>-</mo>
+<mn>TB</mn>
+<mo>.</mo>
+</math>
+
+<p>From Equations (1) and (2), we have:</p>
+
+<math display ='block'>
+<mn>TB</mn>
+<mo>=</mo>
+<mn>CA</mn>
+<mo>-</mo>
+<mn>FTA</mn>
+<mo>+</mo>
+<mn>FDA</mn>
+<mo>.</mo>
+</math>
+
+<p>Noting that this is the same as <math><mn>TB</mn><mo>=</mo><mn>CA</mn><mo>-</mo><mn>TTD</mn></math>, we can see that the tax basis is the portion of the carrying amount that does <em>not</em> lead to net future taxable amounts.</p>
+
+<h4>FTA &lt; FDA</h4>
+
+<p>If FTA &lt; FDA, then we have deductible temporary differences given by: [Equation (1)]</p>
+
+<math display ='block'>
+<mn>DTD</mn>
+<mo>=</mo>
+<mn>FDA</mn>
+<mo>-</mo>
+<mn>FTA</mn>
+<mo>.</mo>
+</math>
+
+<p>This follows directly from the meaning of deductible temporary differences: the net future tax deductions arising from the asset that will lead to tax savings.</p>
+
+<p>Recall that we earlier (Deferred Tax reading 1) defined DTD for an asset as follows: [Equation(2)]</p>
+
+<math display ='block'>
+<mn>DTD</mn>
+<mo>=</mo>
+<mn>TB</mn>
+<mo>-</mo>
+<mn>CA</mn>
+<mo>.</mo>
+</math>
+
+<p>From Equations (1) and (2), we have:</p>
+
+<math display ='block'>
+<mn>TB</mn>
+<mo>=</mo>
+<mn>CA</mn>
+<mo>-</mo>
+<mn>FTA</mn>
+<mo>+</mo>
+<mn>FDA</mn>
+<mo>.</mo>
+</math>
+
+<p>Noting that this is the same as <math><mn>TB</mn><mo>=</mo><mn>CA</mn><mo>+</mo><mn>DTD</mn></math>, we can see that the tax basis is the carrying amount plus the net future deductions arising from it.</p>
+
+<h4>Paragraph 7</h4>
+
+<p>From the analysis above, we have a mechanical formula to compute the tax basis of an asset, and do not have to imagine a tax-rules-based balance-sheet.</p>
+
+<p>Here is the formula again:</p>
+
+<math display ='block'>
+<mn>TB</mn>
+<mo>=</mo>
+<mn>CA</mn>
+<mo>-</mo>
+<mn>FTA</mn>
+<mo>+</mo>
+<mn>FDA</mn>
+<mo>.</mo>
+</math>
+
+<p>The definition of tax basis in SFRS(I) 1-12:7 is directly in terms of this formula. Here is the quote.</p>
+
+<p>&quot;
+The tax base of an asset is the amount that will be deductible for tax purposes against any taxable economic benefits that will flow to an entity when it recovers the carrying amount of the asset. If those economic benefits will not be taxable, the tax base of the asset is equal to its carrying amount.
+&quot;</p>
+
+
+<h4>Examples</h4>
+
+Let us look at some examples of the tax basis calculation:
+
+<p></p>
+
+<div class='example'>
+<h4>Example 1: PPE</h4>
+<p><span class="ex1_coname"></span> has PPE with acquisition cost $<span class="ex1_ppe_cost"></span> purchased at <span class="ex1_acq_date"></span>. The current balance-sheet date is <span class="ex1_bs_date"></span>. The PPE has a life of <span class="ex1_ppe_life_acc"></span> years for financial reporting purposes with no residual value. For tax purposes, equal capital allowances each year can be claimed on the PPE for <span class="ex1_ppe_life_tax"></span> years. Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex1_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex1_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex1_ca"></span></td>
+<td><span class="ex1_fta"></span></td>
+<td><span class="ex1_fda"></span></td>
+<td><span class="ex1_tb"></span></td>
+<td><span class="ex1_ttd"></span></td>
+<td><span class="ex1_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+<p>The CA is the acquisition cost less accumulated depreciation so far. The entire CA amount will potentially lead to future taxable income, as it is recovered through use in the company&#39;s business operations, which are normally taxable. Thus the FTA is the same as the CA. The FDA is tax written down value (TWDV): cost less allowances taken so far. </p>
+
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 2: Receivables</h4>
+<p>A bank has non-interest-bearing receivables outstanding with gross amount $<span class="ex2_rec_gross"></span>. Against this it has specific loan loss allowances under SFRS(I) 9 in the total amount of $<span class="ex2_lla_9"></span>. It also has an additional general loan loss allowance required by the bank regulator which amounts to $<span class="ex2_lla_mas"></span>. The income tax authority allows expected credit loss expenses [bad debt expense] computed in accordance with SFRS(I) 9 to be eligible for deduction when incurred, i.e., when recorded for accounting purposes. But any additional expected credit loss above the SFRS(I) 9 requirement cannot be claimed as a deduction. A deduction is allowed only in the case of a write-off in the case of receivables not covered by the SFRS(I) 9 requirements. Fill in the following table (for CA use net receivables):</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex2_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex2_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex2_ca"></span></td>
+<td><span class="ex2_fta"></span></td>
+<td><span class="ex2_fda"></span></td>
+<td><span class="ex2_tb"></span></td>
+<td><span class="ex2_ttd"></span></td>
+<td><span class="ex2_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+The carrying amount is the receivables balance net of both types of allowances. The future taxable amount (FTA) is 0. In this case, the carrying amount is recovered when the borrower repays the loan, which is not taxable revenue. The future deductible amount (FDA) is the amount of the additional (non-SFRS(I) 9) allowance, which was not deductible when recorded, but can be deducted in future when related write-offs occur. In this case, the tax basis reflects the net receivables based strictly on SFRS(I) 9 requirements, without the extra allowance prescribed by the bank regulator.
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 3: Assets held for sale</h4>
+<p><span class="ex3_coname"></span> has an asset held for sale under SFRS(I) 5. The asset is recorded at its revalued amount of $<span class="ex3_fv"></span>. Its original acquisition cost was $<span class="ex3_cost"></span> which is tax deductible via equal capital allowances each year for <span class="ex3_life"></span> years; of which <span class="ex3_used"></span> years have elapsed at the current balance-sheet date. There is no capital gains tax, but on sale of the asset, the tax calculation of gain on sale [proceeds less tax written down value] is taxable at the regular income-tax rate up to the total amount of the previously used capital allowances (i.e., the previously utilized capital allowances are clawed back). This is similar to the sales proceeds being treated as taxable income up to the cost of the asset, while against this the tax written down value can be claimed as a deduction.  Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex3_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex3_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex3_ca"></span></td>
+<td><span class="ex3_fta"></span></td>
+<td><span class="ex3_fda"></span></td>
+<td><span class="ex3_tb"></span></td>
+<td><span class="ex3_ttd"></span></td>
+<td><span class="ex3_dtd"></span></td>
+</tr>
+</table>
+<p>The CA is the revalued amount of the asset, as stated in the example. Since the asset is held for sale, the carrying amount is recovered not by using the asset, but by selling it. At that point, the taxable amount (FTA) is restricted to the cost amount or $<span class="ex3_cost"></span>. Against this, the tax written down value can be claimed as a deduction (FDA) which is <math><mn class="ex3_cost"></mn><mo>/</mo><mn class="ex3_life"></mn><mo>&times;</mo><mo>(</mo><mn class="ex3_life"></mn><mo>&minus;</mo><mn class="ex3_used"></mn><mo>)</mo></math> or $<span class="ex3_fda"></span>. (In this example, it is difficult to reason how the tax basis corresponds to an imaginary tax-based balance sheet. Never mind, we just follow the rule provided by paragraph 7. This rule always applies, while sometimes the imaginary-balance-sheet measurement may not be clear, as in this example.)</p>
+<p></p>
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 4: PPE with residual value</h4>
+<p>A company has PPE with cost $<span class="ex4_cost"></span>, and total life of <span class="ex4_life_fr"></span> years for financial reporting purposes, of which <span class="ex4_used"></span> years are completed. The PPE has a residual value of $<span class="ex4_rv"></span> for financial reporting purposes. For tax purposes, equal capital allowances are available for <span class="ex4_life_tax"></span> years from the acquisition date.</p>
+
+<p>There is a capital gains tax, which has a different tax rate from the regular income tax rate. Capital gains tax is applied to the difference between the sales proceeds and the tax written down value when the asset is sold.</p>
+
+<p>To account for this, we break up the carrying amount into the depreciable portion, and the residual value. We analyze the depreciable portion of the carrying amount as being recovered through use, while we analyze the residual value as being recovered through sale at the end of the financial reporting life. We record the remaining allowances that can be claimed until the end of the financial reporting life as future deductible amounts against the depreciable portion, and we record any additional allowances that would only be claimable after the end of the financial reporting life as future deductible amounts against the residual value.</p>
+
+<p></p>
+<p>Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td class="l">Depreciable amount</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Residual value</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex4_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex4_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td class="l">Depreciable amount</td>
+<td><span class="ex4_d_ca"></span></td>
+<td><span class="ex4_d_fta"></span></td>
+<td><span class="ex4_d_fda"></span></td>
+<td><span class="ex4_d_tb"></span></td>
+<td><span class="ex4_d_ttd"></span></td>
+<td><span class="ex4_d_dtd"></span></td>
+</tr>
+<tr>
+<td class="l">Residual value</td>
+<td><span class="ex4_rv_ca"></span></td>
+<td><span class="ex4_rv_fta"></span></td>
+<td><span class="ex4_rv_fda"></span></td>
+<td><span class="ex4_rv_tb"></span></td>
+<td><span class="ex4_rv_ttd"></span></td>
+<td><span class="ex4_rv_dtd"></span></td>
+</tr>
+</tr>
+</table>
+<p></p>
+<p>The deferred tax liability or asset based on the TTD or DTD for the depreciable amount would be computed using the income tax rate; while the deferred tax liability or asset based on the TTD or DTD for the residual value would be computed using the capital gains tax rate.</p>
+
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 5: Revalued land</h4>
+<p><span class="ex5_coname"></span> has land which is recorded under the revaluation model. The original cost is $<span class="ex5_cost"></span> and the revalued amount at the balance-sheet date is $<span class="ex5_fv"></span>. </p>
+<p>
+Under SFRS(I) 1-12, in calculating deferred tax on land under the revaluation model, we assume that the carrying amount will be recovered through sale.
+</p>
+
+<p>
+Capital gains tax is calculated based on the difference between the sales proceeds and the original land cost.
+</p>
+
+<p>Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex5_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex5_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex5_ca"></span></td>
+<td><span class="ex5_fta"></span></td>
+<td><span class="ex5_fda"></span></td>
+<td><span class="ex5_tb"></span></td>
+<td><span class="ex5_ttd"></span></td>
+<td><span class="ex5_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+<p>The CA is the revalued amount. The FTA represents the gross taxable (capital gains) amount when the land is sold at its carrying amount. The FDA represents the deductions available on sale which equal the original land cost. </p>
+
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 6: Investment property under the fair value model</h4>
+<p><span class="ex6_coname"></span> has investment property which is recorded under the fair value model (that is, it is recorded at its fair value on the balance sheet). The tax written down value at the balance-sheet date is $<span class="ex6_twdv"></span> and the fair value amount at the balance-sheet date is $<span class="ex6_fv"></span>. </p>
+<p>
+Under SFRS(I) 1-12, in calculating deferred tax on investment property under the fair value model, we assume by default that the carrying amount will be recovered through sale. The reporting entity may override this assumption if there is sufficient evidence that they are holding the property for income purposes (rental) rather than for sale. No such evidence is provided in this case. 
+</p>
+
+<p>
+Capital gains tax is calculated based on the difference between the sales proceeds and the original land cost.
+</p>
+
+<p>Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex6_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex6_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex6_ca"></span></td>
+<td><span class="ex6_fta"></span></td>
+<td><span class="ex6_fda"></span></td>
+<td><span class="ex6_tb"></span></td>
+<td><span class="ex6_ttd"></span></td>
+<td><span class="ex6_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+<p>The CA is the fair value amount. The FTA represents the gross taxable (capital gains) amount when the investment property is sold at its carrying amount. The FDA represents the deductions available on sale which equal the tax written down value. </p>
+
+</div>
+</div>
+
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="p8">Liability tax basis</h2>
+
+<p>SFRS(I)1-12:8 [paragraph 8] provides the definition for the tax basis of a liability. The definition distinguishes between two types of liability: unearned revenue, and other general liabilities. Let us first consider the case of general liabilities other than unearned revenue.</p>
+
+<h3>General liability</h3>
+
+<p>In the case of a liability, the carrying amount represents a stored up future <em>loss</em> rather than future income. The question then is, whether this loss, when it happens, will be tax-deductible. If it is, then the amount of the deduction is future deductible amount (FDA).</p>
+
+<p>The deductible temporary differences are simply equal to these future deductible amounts. We have: (Equation 1-1)</p>
+
+<math display ="block">
+ <mi>DTD</mi>
+ <mo>=</mo>
+ <mi>FDA</mi>
+ <mo>.</mo>
+</math>
+
+<p>But we also have (from deferred tax reading 1) [Equation 1-2]</p>
+
+<math display="block">
+ <mi>DTD</mi>
+ <mo>=</mo>
+ <mi>CA</mi>
+ <mo>&minus;</mo>
+ <mi>TB</mi>
+ <mo>.</mo>
+</math>
+
+<p>Equating the right hand sides of Equations 1-1 and 1-2, we have:</p>
+
+<math display="block">
+ <mi>CA</mi>
+ <mo>&minus;</mo>
+ <mi>TB</mi>
+ <mo>=</mo>
+ <mi>FDA</mi>
+ <mo>.</mo>
+</math>
+
+<p>which implies:</p>
+
+<math display="block">
+ <mi>TB</mi>
+ <mo>=</mo>
+ <mi>CA</mi>
+ <mo>&minus;</mo>
+ <mi>FDA</mi>
+ <mo>.</mo>
+</math>
+
+<p>In some exotic situations, taxable income may also arise at the same time as the loss (FTA). For example, a foreign currency liability may have a taxable foreign currency gain at the same time as its outflow occurs. We can extend our formula to accommodate such situations:</p>
+
+<math display="block">
+ <mi>TB</mi>
+ <mo>=</mo>
+ <mi>CA</mi>
+ <mo>&minus;</mo>
+ <mi>FDA</mi>
+ <mo>[</mo>
+ <mo>&plus;</mo>
+ <mi>FTA</mi>
+ <mo>]</mo>
+ <mo>.</mo>
+</math>
+
+<p>The tax basis is the carrying amount less the net future deductible amounts. Net future deductible amounts are future deductible amounts less any future taxable amounts arising together with them.</p>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 7: Warranty provision</h4>
+<p><span class="ex7_coname"></span> has a warranty provision with a carrying amount of $<span class="ex7_ca"></span> at the balance-sheet date. For tax purposes, only actual warranty claims are allowed as a deduction.
+</p>
+
+<p>Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex7_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex7_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex7_ca"></span></td>
+<td><span class="ex7_fta"></span></td>
+<td><span class="ex7_fda"></span></td>
+<td><span class="ex7_tb"></span></td>
+<td><span class="ex7_ttd"></span></td>
+<td><span class="ex7_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+<p>The CA represents the estimated amount of future warranty claims, which entire amount will be tax deductible when they occur. So the future deductible amount (FDA) equals the CA.</p>
+
+</div>
+</div>
+
+
+<h3>Unearned revenue</h3>
+
+<p>In the case of unearned revenue, future taxable income may arise when the related revenue is earned (the unearned revenue commitment is fulfilled).</p>
+
+<p>Alternatively, depending on the tax rules, the unearned revenue amount may already have been taxed, for example at the point when it was received. </p>
+
+<p>From these alternatives, SFRS(I) 1-12:8 (paragraph 8) gives us the following prescription to find the tax basis of unearned revenue.</p>
+
+<math display="block">
+ <mn>TB</mn>
+ <mo>=</mo>
+ <mn>CA</mn>
+ <mo>&minus;</mo>
+ </mi>future&nbsp;non-taxable&nbsp;amounts.</mi>
+</math>
+
+<p>That is, the tax basis (TB) is the carrying amount (CA) less the portion that has already been taxed in the past.</p>
+
+<p>The future non-taxable amount provides the basis for the future tax savings arising from the liability (DTD). When future revenue corresponding to these amounts is realized, it will not be taxed. So there will be a corresponding future tax saving. Equation 2-1:</p>
+
+<math display="block">
+ <mn>DTD</mn>
+ <mo>=</mo>
+ </mi>future&nbsp;non-taxable&nbsp;amounts.</mi>
+</math>
+
+<p>But we also have [Equation 2-2]:</p>
+
+<math display="block">
+ <mn>DTD</mn>
+ <mo>=</mo>
+ </mi>CA</mi>
+ <mo>&minus;</mo>
+ <mi>TB</mi>
+ <mo>.</mo>
+</math>
+
+<p>From equations 2-1 and 2-2 we derive:</p>
+
+<math display="block">
+ <mn>TB</mn>
+ <mo>=</mo>
+ <mn>CA</mn>
+ <mo>&minus;</mo>
+ </mi>future&nbsp;non-taxable&nbsp;amounts.</mi>
+</math>
+
+
+<p>To fit this formula in the schema we have been following, we can (following Picker et al, <em>Applying IFRS standards</em>) write the future non-taxable amount as a <em>negative</em> number in the FTA column.
+
+<p></p>
+
+<div class='example'>
+<h4>Example 8: Unearned revenue</h4>
+<p><span class="ex8_coname"></span> receives payment in advance for executory services which it performs later. <span class="ex8_taxrule"></span>  At the balance-sheet date, the carrying amount of the unearned revenue liability is $<span class="ex8_ca"></span>. 
+</p>
+
+<p>Fill in the following table:</p>
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+</table>
+
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex8_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex8_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td><span class="ex8_ca"></span></td>
+<td><span class="ex8_fta"></span></td>
+<td>--</td>
+<td><span class="ex8_tb"></span></td>
+<td>--</td>
+<td><span class="ex8_dtd"></span></td>
+</tr>
+</table>
+<p></p>
+
+
+</div>
+</div>
+
+<h3>Paragraph 8</h3>
+
+<p>Here is SFRS(I) 1-12 paragraph 8:</p>
+
+<p>&quot; 
+The tax base of a liability is its carrying amount, less any amount that will be deductible for tax purposes in respect of that liability in future periods. In the case of revenue which is received in advance, the tax base of the resulting liability is its carrying amount, less any amount of the revenue that will not be taxable in future periods.&quot;</p>
+
+<p><a href="#top">Back to top</a></p>
+
+<h2 id="excl">Excluded differences</h2>
+
+<p>In calculating deferred tax, there are certain items that the standard requires us to exclude from the computation. These include <em>inter alia</em>:</p>
+
+<ol>
+<li>
+Goodwill (we will leave discussion of this to the advanced course).
+</li>
+<li>
+Assets (or some portion of assets) where the acquisition cost is never tax deductible (unless they are acquired in a takeover&mdash;we will leave that situation to the advanced course).
+</li>
+</ol>
+
+<p>The book-tax differences for the non-deductible asset are really more like permanent than temporary differences (except that they will mechanically become zero when the asset life ends).</p>
+
+<p></p>
+
+<div class="example">
+<h4>Example 9: Industrial buildings</h4>
+<p>In a particular country, industrial buildings are not eligible for any allowances (i.e., no tax depreciation or no tax deductions at any point). Moreover, they are not eligible for capital gains tax when sold. We exclude the book-tax differences arising from such buildings in our deferred tax calculations.</p>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 10: Motor vehicle with cap on deductions</h4>
+<p><span class="ex10_coname"></span> purchases a motor vehicle at a cost of $<span class="ex10_cost"></span>. Under the tax rules, total deductions on the vehicle are capped at $<span class="ex10_cap"></span>. The life of the asset for book purposes is <span class="ex10_life_fr"></span> years, while the life of the asset for tax purposes is <span class="ex10_life_tax"></span> years.</p>
+
+<p>We can calculate TTD or DTD separately for the non-deductible portion of the motor vehicle carrying amount, and for the deductible portion of the motor vehicle carrying amount. The TTD or DTD from the non-deductible portion of the motor vehicle carrying amount are excluded from the deferred tax liability or asset calculation.</p>
+
+<p>At acquisition date, the analysis would be as follows:</p>
+
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td>Excluded portion</td>
+<td><span class="ex10_nd_ca"></span></td>
+<td><span class="ex10_nd_fta"></span></td>
+<td><span class="ex10_nd_fda"></span></td>
+<td><span class="ex10_nd_tb"></span></td>
+<td><span class="ex10_nd_ttd"></span></td>
+<td><span class="ex10_nd_dtd"></span></td>
+</tr>
+<tr>
+<td>Deductible portion</td>
+<td><span class="ex10_d_ca"></span></td>
+<td><span class="ex10_d_fta"></span></td>
+<td><span class="ex10_d_fda"></span></td>
+<td><span class="ex10_d_tb"></span></td>
+<td><span class="ex10_d_ttd"></span></td>
+<td><span class="ex10_d_dtd"></span></td>
+</tr>
+</table>
+
+<p>The TTD of $<span class="ex10_nd_ttd"></span> from the non-deductible portion of the asset is excluded from the deferred tax calculations.</p>
+
+<p>Subsequently, we allocate the book accumulated depreciation between the excluded and deductible portions of CA in proportion to the respective cost amounts. Try the analysis at the end of the first year.</p>
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex10_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex10_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td>Excluded portion</td>
+<td><span class="ex10_nd_ca_1yr"></span></td>
+<td><span class="ex10_nd_fta_1yr"></span></td>
+<td><span class="ex10_nd_fda_1yr"></span></td>
+<td><span class="ex10_nd_tb_1yr"></span></td>
+<td><span class="ex10_nd_ttd_1yr"></span></td>
+<td><span class="ex10_nd_dtd_1yr"></span></td>
+</tr>
+<tr>
+<td>Deductible portion</td>
+<td><span class="ex10_d_ca_1yr"></span></td>
+<td><span class="ex10_d_fta_1yr"></span></td>
+<td><span class="ex10_d_fda_1yr"></span></td>
+<td><span class="ex10_d_tb_1yr"></span></td>
+<td><span class="ex10_d_ttd_1yr"></span></td>
+<td><span class="ex10_d_dtd_1yr"></span></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+
+</div>
+</div>
+
+<p><a href="#top">Back to top</a></p>
+
+<p></p>
+
+<h2 id="dtw">Deferred tax worksheet</h2>
+
+<p>At year-end, we can estimate deferred tax liability and asset balances by preparing a deferred tax worksheet.</p>
+
+<p>In the worksheet, we list assets and liabilities, and use the analytical procedure illustrated above to compute the related taxable temporary differences or deductible temporary differences.</p>
+
+<p>We take the sum of the taxable temporary differences. We multiply this by the income tax rate to get the deferred tax liability. (We may have multiple tax rates, e.g., income tax rate and capital gains tax rate, in which case we sum up the TTDs for which each tax rate applies, and multiply that subtotal by that tax rate.)</p>
+
+<p>We take the sum of the deductible temporary differences. We multiply this by the income tax rate to get the deferred tax asset.</p>
+
+<p>We will follow the practice of first computing TTDs or DTDs for excluded items, and then explicitly subtracting them from the total. This provides a record that we have tracked these items and dealt with them correctly.</p>
+
+<p>Having calculated the deferred tax liability and asset, we compare them with the beginning balances for the year. This enables us to work out the required movements in each. At this point, we factor in any part of the movement that has already been recorded during the year. For example, when PPE is revalued under the revaluation model, the movement in deferred tax liability from the revaluation gain is recorded at the point of revaluation.</p>
+
+<p>So here is a template for the deferred tax worksheet:</p>
+
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td class="l"><strong>Differences:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l"><strong>Assets:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>Liabilities:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>...</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>TOTAL DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>Less: EXCLUDED DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>ADJUSTED TOTAL DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>Deferred tax liability (DTL) @ tax rate </strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td class="l"><strong>Deferred tax asset (DTA) @ tax rate</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>DTL and DTA beginning balances</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>Prior movements in DTL and DTA</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+<tr>
+<td class="l"><strong>DTL and DTA required change</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td>X</td>
+</tr>
+</table>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 11: Deferred tax worksheet</h4>
+<p><span class="ex11_coname"></span> has revalued land with a carrying amount of $<span class="ex11_land_ca"></span> and an original cost of $<span class="ex11_land_cost"></span>. Deferred tax liability was increased by $<span class="ex11_land_dtreval"></span> when the land was revalued. Only the cost of the land is tax deductible if the land is sold.</p>
+
+<p><span class="ex11_coname"></span> has industrial buildings with a carrying amount of $<span class="ex11_bldg_ca"></span>. Buildings are not eligible for any tax deductions during their life or when sold.</p>
+
+<p>The company has a warranty provision with carrying amount $<span class="ex11_warranty_ca"></span>. Warranty claims are tax deductible when the actual claims occur.</p>
+
+<p>The tax rate on both ordinary income and capital gains is <span class="ex11_taxrate"></span>%.</p>
+
+<p>At the start of the year, the balance in deferred tax liability was $<span class="ex11_dtl_bb"></span>, while the balance in deferred tax asset was $<span class="ex11_dta_bb"></span>.</p>
+
+<p>Prepare the deferred tax worksheet.</p>
+
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex11_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex11_soln" style="display:none;">
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>CA</td>
+<td>FTA</td>
+<td>FDA</td>
+<td>TB</td>
+<td>TTD</td>
+<td>DTD</td>
+</tr>
+<tr>
+<td class="l"><strong>Differences:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l"><strong>Assets:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Land</td>
+<td><span class="ex11_land_ca"></span></td>
+<td><span class="ex11_land_fta"></span></td>
+<td><span class="ex11_land_fda"></span></td>
+<td><span class="ex11_land_tb"></span></td>
+<td><span class="ex11_land_ttd"></span></td>
+<td><span class="ex11_land_dtd"></span></td>
+</tr>
+<tr>
+<td class="l">Building</td>
+<td><span class="ex11_bldg_ca"></span></td>
+<td><span class="ex11_bldg_fta"></span></td>
+<td><span class="ex11_bldg_fda"></span></td>
+<td><span class="ex11_bldg_tb"></span></td>
+<td><span class="ex11_bldg_ttd"></span></td>
+<td><span class="ex11_bldg_dtd"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>Liabilities:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="l">Warranty</td>
+<td><span class="ex11_warranty_ca"></span></td>
+<td><span class="ex11_warranty_fta"></span></td>
+<td><span class="ex11_warranty_fda"></span></td>
+<td><span class="ex11_warranty_tb"></span></td>
+<td><span class="ex11_warranty_ttd"></span></td>
+<td><span class="ex11_warranty_dtd"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>TOTAL DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_ttd_tot"></span></td>
+<td><span class="ex11_dtd_tot"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>Less: EXCLUDED DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_ttd_excl"></span></td>
+<td><span class="ex11_dtd_excl"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>ADJUSTED TOTAL DIFFERENCES:</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_ttd_adj"></span></td>
+<td><span class="ex11_dtd_adj"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>Deferred tax liability (DTL) @ <span class="ex11_taxrate"></span>%</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_dtl"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="l"><strong>Deferred tax asset (DTA) @ <span class="ex11_taxrate"></span>%</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_dta"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>DTL and DTA beginning balances</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_dtl_bb"></span></td>
+<td><span class="ex11_dta_bb"></span></td>
+</tr>
+<tr>
+<td class="l"><strong>Prior movements in DTL and DTA</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_land_dtreval"></span></td>
+<td></td>
+</tr>
+<tr>
+<td class="l"><strong>DTL and DTA required change</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex11_dtl_chg"></span></td>
+<td><span class="ex11_dta_chg"></span></td>
+</tr>
+</table>
+
+<p></p>
+</div>
+</div>
+
+<p><a href="#top">Back to top</a></p>
+
+<p></p>
+
+<h2 id="pres">Balance-sheet presentation</h2>
+
+<h3>Noncurrent items</h3>
+
+<p>Under IFRS, deferred tax assets and liabilities are always noncurrent.</p>
+
+<h3>Netting</h3>
+
+<p>Deferred tax assets and liabilities must be shown as separate items. The exception is when the entity is legally entitled to offset them against each other, in which case, they must be shown as a single item&mdash;net deferred tax liability, or net deferred tax asset.</p>
+
+  <script src="dt2_reading.js"></script>
+
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+
+ </body>
+</html>
