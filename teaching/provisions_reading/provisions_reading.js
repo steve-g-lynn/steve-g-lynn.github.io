@@ -214,7 +214,7 @@ let ex17_num_new_joined=ex17_num_new  - 5 - (a1 % 3);
 sl_update("ex17_num_new_joined",ex17_num_new_joined.toLocaleString());
 let ex17_date_joined=getRndInteger(5,23);
 sl_update("ex17_date_joined",ex17_date_joined.toLocaleString());
-let ex17_prov=ex17_num_curr*ex17_levy_pm + ex17_num_new_joined*(31 - ex17_date_joined + 1);
+let ex17_prov=ex17_num_curr*ex17_levy_pm + ex17_num_new_joined*(31 - ex17_date_joined + 1)*ex17_levy_pd;
 sl_update("ex17_prov",ex17_prov.toFixed(2));
 
 //EX18 DECOMMISSIONING
