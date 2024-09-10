@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Leases 2</title>
+  <link rel="stylesheet" href="mystyle.css">
+ </head>
+ <body>
+  <h1 id="top">Leases 2</h1>
+   <p><i>Be warned that some numbers will change every time you reload the page. This page uses MathML which may not display properly in some browsers. Try Firefox if math does not render properly in your browser.</i></p>
+  <p>This reading is based on the prescriptive guidance in Singapore FRS(I) 16 <em>Leases</em></p>  
+  <h2>Learning outcomes</h2>
+  <p>After studying this reading, you should be able to:</p>
+  <ol>
+  <li>State the <a href="#single">single model</a> for lessees in IFRS 16 (SFRS(I) 16), and briefly explain its historical context.</li>
+ <li><a href="#meas">Measure</a> the lease liability and right-of-use asset for a lessee under SFRS(I) 16.</li>
+  <li><a href="#extend">Remeasure</a> a lease liability and right-of-use asset for a lessee when the lease is extended.</li> 
+</ol>
+
+
+<h2 id="single">SFRS(I) 16 for lessees</h2>
+
+<p>Prior to the introduction of SFRS(I) 16 effective 2019, the accounting treatment of leases for lessees was the mirror image of that for lessors. Leases for lessees were classified into operating leases and finance leases. In the latter case, the leased asset moved on to the lessee&#39;s books together with a lease liability reflecting the present value of the future lease payments.</p>
+
+<p>This treatment was criticized on the grounds that operating leases for lessees left potentially large future rental obligations off the balance sheet. For example, an <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/articles/opleaseasdebt.htm">article linked</a> to by valuation expert Damodaran exemplifies the concern, saying: &quot;Despite the post-Enron drive to improve accounting standards, U.S. companies are still allowed to keep off their balance sheets billions of dollars of lease obligations that are just as real as financial commitments originating from bank loans and other borrowings.&quot;  Damodaran&quot;s standard valuation advice included always estimating the effect of capitalizing all operating leases in order to properly reflect a company&#39;s debt burden. He even provided a <a href="https://www.stern.nyu.edu/~adamodar/pc/oplease.xls">spreadsheet template</a> to do so. </p>
+
+<p>IFRS 16 (in Singapore SFRS(I) 16) removes this concern in the IFRS zone by requiring lessees to treat all leases like a purchase of the leased asset, called a right-of-use (ROU) asset, in exchange for a lease liability, with optional exceptions in the case of leases of low-value items or short-term leases. That is, there is a single model for all leases for all lessees.</p>
+
+<h3>Optional exceptions</h3>
+
+<ol>
+<li>
+Low-value items: Leases of items of low value can be treated similarly to operating leases. The standard itself does not provide a number to decide what is &quot;low value&quot;, but some attached discussion mentions US$5,000 or less. We can use this as an unofficial thumbrule.
+</li>
+<li>
+Short-term leases: Leases of 12 months or less can be treated similarly to operating leases.
+</li>
+</ol>
+
+<div class='example'>
+<h4>Example 1: Low-value lease</h4>
+<p>A University enters a contract with a computer manufacturer to lease desktop computers for its classroom and faculty offices. The number of computers leased would be in the thousands. Each individual computer has a fair value at lease inception of less than US$5,000. Can this be treated as a low-value item exception?</p>
+<a href="javascript: void(0);" onClick="toggle('ex1_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex1_soln" style="display:none;">
+<p>No. Substantially (substance over form), this is a contract to lease all the computers collectively, not a collection of independent unrelated contracts to lease each individual computer. As such, it is not of a low-value amount, and the exception should not be asserted.</p>
+</div>
+</div>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 2: Short-term lease</h4>
+<p>A retailer has a showroom in the downtown area. The showroom is rented under a renewable 12-month lease. The retailer has used this showroom continuously for the last several years, renewing the one-year lease each time, and intends to continue using it into the future. Can this be treated as a short-term lease exception?</p>
+<a href="javascript: void(0);" onClick="toggle('ex2_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex2_soln" style="display:none;">
+<p>No. Substantially (substance over form), the lessee will lease the showroom for a period greater than a year. In fact, the standard requires that expected renewal be factored into the lease calculations, and the lease liability be recorded over the expected lease term including renewals.</p>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="meas">Measurement</h2>
+
+<h3>Lease payments</h3>
+
+<p>Lease payments accounted for by the lessee include:</p>
+
+<ul>
+ <li>periodic rental payments;</li>
+ <li>a bargain purchase option if any;</li>
+ <li>guaranteed residual value if any. Unlike the lessor, the lessee does not use the guaranteed amount itself in their calculations. Rather, they use an estimate of the actual costs they would need to incur in order to satisfy the guarantee. For example, the guaranteed amount of residual value could be $500. But the lessee would need to spend just $40 at lease-end on remediation costs to satisfy this guarantee. In that case, the lessee will use $40, not $500, to measure their lease payments and resulting lease liability.</li>
+ <li>
+  Lease payments exclude any payments for non-lease performance obligations such as reimbursements for executory activities performed by the lessor.
+ </li>
+</ul>
+
+<h3>Lease liability</h3>
+
+<p>The standard defines the initial lease liability as the present value of the remaining lease payments at commencement date <em>after</em> the initial advance payments if any.</p> 
+
+<p>But, purely for pedagogical reasons, let us define the initial lease liability differently&mdash;as the present value of the lease payment at commencement date <em>before</em> any initial advance payments.</p>
+
+<p>This has the trivial effect of splitting up the initial lease transaction into two steps instead of an equivalent single transaction: first, recognize the lease liability (our definition) and ROU asset, and second, record the initial advance payment (leading to the SFRS(I) initial lease liability).</p>  
+
+<p>Our initial lease liability can be read as &quot;SFRS(I) initial lease liability plus initial advance payments&quot;.</p>
+
+<p>The present value is calculated using the implicit interest rate if possible, which is the same implicit interest rate as calculated by the lessor. This may not be available: for example, the lessee may not know such parameters as the unguaranteed residual value or the lessor IDC; or the lease may be an operating lease for the lessor. As an alternative, the standard allows the use of the lessee&#39;s borrowing rate at inception date.</p>
+
+<h3>Right-of-use (ROU) asset</h3>
+
+<p>The initial ROU asset is measured at acquisition cost, given by the initial lease liability (our definition, not the standard&#39;s) plus the Lessee initial direct costs (Lessee IDC).</p>
+
+<p>Subsequently, the ROU asset is depreciated down to zero over the lease term. There is no residual value because the measure of the residual value guarantee for the lessee is an actual expected cost at lease-end, not an estimate of what the asset will be worth at that point.</p>
+
+<p>If there is a title transfer or bargain purchase option in the lease contract, then the ROU asset is depreciated over the useful life of the leased asset, not the lease term. There could be a residual value in this case.</p>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 3: Lease initial recording</h4>
+<p><span class="ex3_coname"></span> leases (as lessee) an asset with fair value of $<span class="ex3_fv"></span> for two years in exchange for 2 annual lease payments of $<span class="ex3_pmt"></span> each in advance. The lessee estimates that they would need to spend $<span class="ex3_rv"></span> on remediation costs at lease-end to satisfy guarantees. The lessee does not know the implicit interest rate, and uses their cost of borrowing at the inception date, which is <span class="ex3_eir"></span> percent. The lessee IDC is $<span class="ex3_idc"></span>. How much is the initial lease liability (our definition) and the inital ROU asset? Show the JE to initially record the lease (before any advance payments).</p>
+<a href="javascript: void(0);" onClick="toggle('ex3_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex3_soln" style="display:none;">
+<p>Lease liability: $<span class="ex3_ll"></span>.</p>
+<math display="block">
+ <mn class="ex3_pmt"></mn>
+ <mo>&plus;</mo>
+ <mfrac>
+   <mn class="ex3_pmt"></mn>
+   <mn class="ex3_1plusr"></mn>
+ </mfrac>
+ <mo>&plus;</mo>
+ <mfrac>
+ <mn class="ex3_rv"></mn>
+ <msup>
+ <mn class="ex3_1plusr"></mn>
+ <mn>2</mn>
+ </msup>
+ </mfrac>
+ <mo>.</mo>
+</math>
+<p>ROU asset: $<span class="ex3_rou"></span></p>
+<math display="block">
+<mn class="ex3_ll"></mn>
+<mo>&plus;</mo>
+<mn class="ex3_idc"></mn>
+<mo>.</mo>
+</math>
+<p></p>
+<table>
+<tr>
+  <td class="l">Dr ROU asset</td>
+  <td class="r"><span class="ex3_rou"></span></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="l">&nbsp;&nbsp; Cr Lease liability</td>
+    <td></td>
+  <td class="r"><span class="ex3_ll"></span></td>
+</tr>
+<tr>
+  <td class="l">&nbsp;&nbsp; Cr Cash [IDC]</td>
+    <td></td>
+  <td class="r"><span class="ex3_idc"></span></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p>Interest expense is computed each year on the lease liability, using the lease implicit interest rate as the effective interest rate, or, if not available, the company&#39;s borrowing rate at lease inception. We can prepare an interest payment schedule similar to that for the lessor receivable in a finance lease.</p>
+
+<p></p>
+
+<div class='example'>
+<h4>Example 4: Interest payment schedule</h4>
+<p><span class="ex4_coname"></span> leases (as lessee) an asset with fair value of $<span class="ex4_fv"></span> for two years in exchange for 2 annual lease payments of $<span class="ex4_pmt"></span> each in advance. The lessee estimates that they would need to spend $<span class="ex4_rv"></span> on remediation costs at lease-end to satisfy guarantees. The lessee does not know the implicit interest rate, and uses their cost of borrowing at the inception date, which is <span class="ex4_eir"></span> percent. The lessee IDC is $<span class="ex4_idc"></span>. Prepare an interest payment schedule for the lease liability in the following format:</p>
+<table>
+<tr>
+<td></td>
+<td>Payment</td>
+<td>Interest expense</td>
+<td>Liability reduces by</td>
+<td>Carrying amount</td>
+</tr>
+<tr>
+<td class="l">Start</td>
+<td></td>
+<td></td>
+<td></td>
+<td>XXX</td>
+</tr>
+<tr>
+<td class="l">Beg Y1</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+<tr>
+<td class="l">Beg Y2</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+<tr>
+<td class="l">End Y2</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+</table>
+<p></p>
+<a href="javascript: void(0);" onClick="toggle('ex4_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex4_soln" style="display:none;">
+<p>Initial lease liability (before 1st advance payment): $<span class="ex4_ll"></span>.</p>
+<math display="block">
+ <mn class="ex4_pmt"></mn>
+ <mo>&plus;</mo>
+ <mfrac>
+   <mn class="ex4_pmt"></mn>
+   <mn class="ex4_1plusr"></mn>
+ </mfrac>
+ <mo>&plus;</mo>
+ <mfrac>
+ <mn class="ex4_rv"></mn>
+ <msup>
+ <mn class="ex4_1plusr"></mn>
+ <mn>2</mn>
+ </msup>
+ </mfrac>
+ <mo>.</mo>
+</math>
+<p></p>
+<table>
+<tr>
+<td></td>
+<td>Payment</td>
+<td>Interest expense</td>
+<td>Liability reduces by</td>
+<td>Carrying amount</td>
+</tr>
+<tr>
+<td class="l">Start</td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex4_ll"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y1</td>
+<td><span class="ex4_pmt"></span></td>
+<td>0</td>
+<td><span class="ex4_pmt"></span></td>
+<td><span class="ex4_ca_1"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y2</td>
+<td><span class="ex4_pmt"></span></td>
+<td><span class="ex4_int_2"></span></td>
+<td><span class="ex4_rep_2"></span></td>
+<td><span class="ex4_ca_2"></span></td>
+</tr>
+<tr>
+<td class="l">End Y2</td>
+<td><span class="ex4_rv"></span></td>
+<td><span class="ex4_int_3"></span></td>
+<td><span class="ex4_rep_3"></span></td>
+<td><span class="ex4_ca_3"></span></td>
+</tr>
+</table>
+
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+<h2 id="extend">Extension of lease</h2>
+
+<p>The lease term used to measure the initial lease liability and ROU asset is the substantially (substance over form) <em>expected length</em> of the lease, which incorporates any likely extensions of the initial lease term, if an extension option exists.</p>
+
+<p>If a lessee had initially recorded a lease under the assumption that they would not extend, but subsequent changes in circumstances make it likely that they would extend, then they are required to remeasure their lease liability and ROU asset to reflect the extension. In doing so, they use the lessee current borrowing rate at the remeasurement date.</p>
+
+<div class='example'>
+<h4>Example 5: Extension</h4>
+<p><span class="ex5_coname"></span> leases (as lessee) an asset with fair value of $<span class="ex5_fv"></span> for two years in exchange for 2 annual lease payments of $<span class="ex5_pmt"></span> each in advance.  The lessee does not know the implicit interest rate, and uses their cost of borrowing at the inception date, which is <span class="ex5_eir"></span> percent. Lessee IDC is negligible. </p>
+<p></p>
+
+<p>Initial lease liability (before 1st advance payment): $<span class="ex5_ll"></span>.</p>
+<math display="block">
+ <mn class="ex5_pmt"></mn>
+ <mo>&plus;</mo>
+ <mfrac>
+   <mn class="ex5_pmt"></mn>
+   <mn class="ex5_1plusr"></mn>
+ </mfrac>
+ <mo>.</mo>
+</math>
+<p>This is the same as the initial ROU asset.</p>
+<p>The initial lease repayment schedule:</p>
+<table>
+<tr>
+<td></td>
+<td>Payment</td>
+<td>Interest expense</td>
+<td>Liability reduces by</td>
+<td>Carrying amount</td>
+</tr>
+<tr>
+<td class="l">Start</td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex5_ll"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y1</td>
+<td><span class="ex5_pmt"></span></td>
+<td>0</td>
+<td><span class="ex5_pmt"></span></td>
+<td><span class="ex5_ca_1"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y2</td>
+<td><span class="ex5_pmt"></span></td>
+<td><span class="ex5_int_2"></span></td>
+<td><span class="ex5_rep_2"></span></td>
+<td><span class="ex5_ca_2"></span></td>
+</tr>
+</table>
+<p>At the end of the first year, <span class="ex5_coname"></span> decides, due to credible business reasons, to extend the lease beyond the current lease term for another year, paying the same annual lease payment. At this date, the company&#39;s borrowing rate is <span class="ex5_eir2"></span> percent.</p>
+
+<p>Compute the remeasured lease liability and ROU asset. Show the revised interest payment schedule in the following format:</p>
+
+<table>
+<tr>
+<td></td>
+<td>Payment</td>
+<td>Interest expense</td>
+<td>Liability reduces by</td>
+<td>Carrying amount</td>
+</tr>
+<tr>
+<td class="l">Start</td>
+<td></td>
+<td></td>
+<td></td>
+<td>XXX</td>
+</tr>
+<tr>
+<td class="l">Beg Y2</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+<tr>
+<td class="l">Beg Y3</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+</table>
+
+<p></p>
+
+<a href="javascript: void(0);" onClick="toggle('ex5_soln')">
+Click here to toggle viewing the solution.
+</a>
+<div id="ex5_soln" style="display:none;">
+<p>Remeasured lease liability at end-Y1: $<span class="ex5_rll"></span>.</p>
+<math display="block">
+ <mn class="ex5_pmt"></mn>
+ <mo>&minus;</mo>
+ <mn class="ex5_int_2"></mn>
+ <mo>&plus;</mo>
+ <mfrac>
+   <mn class="ex5_pmt"></mn>
+   <mn class="ex5_1plusr2"></mn>
+ </mfrac>
+ <mo>.</mo>
+</math>
+<p>Change in lease liability at end-Y1: $<span class="ex5_rll_chg"></span>.</p>
+<math display="block">
+<mn class="ex5_rll"></mn>
+<mo>&minus;</mo>
+<mn class="ex5_ca_1"></mn>
+<mo>.</mo>
+</math>
+<p>We remeasure the ROU asset by adding this same amount to its carrying amount at end-Y1.</p>
+<p>Remeasured ROU asset: <span class="ex5_rrou"></span>.</p>
+<math display="block">
+<mfrac>
+<mn class="ex5_ll"></mn>
+<mn>2</mn>
+</mfrac>
+<mo>&plus;</mo>
+<mn class="ex5_rll_chg"></mn>
+<mo>.</mo>
+</math>
+<p>Revised interest payment schedule</p>
+<table>
+<tr>
+<td></td>
+<td>Payment</td>
+<td>Interest expense</td>
+<td>Liability reduces by</td>
+<td>Carrying amount</td>
+</tr>
+<tr>
+<td class="l">Start</td>
+<td></td>
+<td></td>
+<td></td>
+<td><span class="ex5_rll"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y2</td>
+<td><span class="ex5_pmt"></span></td>
+<td><span class="ex5_int_2"></span></td>
+<td><span class="ex5_rep_2"></span></td>
+<td><span class="ex5_rca_2"></span></td>
+</tr>
+<tr>
+<td class="l">Beg Y3</td>
+<td><span class="ex5_pmt"></span></td>
+<td><span class="ex5_rint_3"></span></td>
+<td><span class="ex5_rrep_3"></span></td>
+<td><span class="ex5_rca_3"></span></td>
+</tr>
+</table>
+</div>
+</div>
+
+<p><a href="#top">back to top</a></p>
+
+  <script src="lease2_reading.js"></script>
+
+<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p> 
+
+ </body>
+</html>
